@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Responsive SideMenu</title>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="navbar">
+      <span class="open-slide">
+        <a href="#" onclick="openslidemenu()">
+          <i class="fas fa-bars fa-2x"></i>
+        </a>
+      </span>
+
+      <ul class="navbar-nav">
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- sidemenu -->
+    <div id="sidemenu" class="side__menu">
+      <span class="close-slide">
+        <a href="#" onclick="closeslidemenu()">&times;</a>
+      </span>
+
+      <ul class="side__menu--list">
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+    </div>
+
+    <!-- main -->
+    <div id="main">
+      <h1>responsive side menu</h1>
+    </div>
+
+    <!-- javascript -->
+    <script>
+      function openslidemenu() {
+        document.getElementById("sidemenu").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeslidemenu() {
+        document.getElementById("sidemenu").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+      }
+    </script>
+  </body>
+</html>
